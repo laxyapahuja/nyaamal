@@ -1,0 +1,29 @@
+{
+    "name": "nyaamal",
+    "version": "1.0",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_icon": "./icon.jpg",
+        "default_title": "nyaamal"
+    },
+    "icons": {
+        "300": "./icon.jpg"
+    },
+    "content_scripts": [{
+        "matches": [
+            "https://myanimelist.net/anime/*"
+        ],
+        "js": [
+            "content.js"
+        ]
+    }],
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "permissions": [
+        "*://nyaaapi.herokuapp.com/*",
+        "*://myanimelist.net/*",
+        "tabs"
+    ]
+}
