@@ -6,7 +6,7 @@ A chrome extension to download torrents directly from MAL. Uses torrents from ny
 
 # How to install
 1. Clone this repository
-2. Open chrome extensions panel by visiting `chrome://entensions`
+2. Open chrome extensions panel by visiting `chrome://extensions`
 3. Turn developer mode on
 4. Click on Load Unpacked
 5. Select the folder containing the repository with the root directory
