@@ -1,8 +1,16 @@
 # nyaamal
-A chrome extension to download torrents directly from MAL. Uses torrents from nyaa.si
+A chrome extension to download anime torrents directly from MAL and Anilist. Uses torrents from <a href="https://nyaa.si">nyaa.si</a>.
+
+# Updates
+- Added support for <a href="https://anilist.co">Anilist</a>.
+- Sort torrents according to size, seeds and date.
 
 # Screenshots
-<img src="https://media.discordapp.net/attachments/706928005313855620/832719141063622686/unknown.png">
+<img src="https://media.discordapp.net/attachments/621798627895017499/833300800565936128/unknown.png">
+MyAnimeList
+#
+<img src="https://media.discordapp.net/attachments/706928005313855620/833296878564409365/unknown.png">
+Anilist
 
 # How to install
 1. Clone this repository
