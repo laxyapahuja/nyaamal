@@ -10,14 +10,15 @@
         "300": "./icon.png"
     },
     "content_scripts": [{
-        "matches": [
-            "https://myanimelist.net/anime/*"
-        ],
-        "js": [
-            "content.js"
-        ]
-    }],
-    "web_accessible_resources": ["script.js"],
+            "matches": ["https://myanimelist.net/anime/*"],
+            "js": ["myanimelist/content.js"]
+        },
+        {
+            "matches": ["https://anilist.co/anime/*"],
+            "js": ["anilist/content.js"]
+        }
+    ],
+    "web_accessible_resources": ["myanimelist/script.js", "anilist/script.js"],
     "permissions": [
         "*://nyaaapi.herokuapp.com/*",
         "*://myanimelist.net/*",
