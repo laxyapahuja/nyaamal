@@ -13,23 +13,38 @@ let torrents = []
 let pageCount = 0
 
 function inflator(torrents) {
-    let string = `<h2>Torrents</h2><table class="table-recently-updated" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><select id="sorter">
-    <option value="time">Sort: Time - Ascending</option>
-    <option value="-time">Sort: Time - Descending</option>
-    <option value="seeders">Sort: Seeds - Ascending</option>
-    <option value="-seeders">Sort: Seeds - Descending</option>
-    <option value="size">Sort: File size - Ascending</option>
-    <option value="-size">Sort: File size - Descending</option>
-    </select> <button onclick="sort()">Sort</button>`
+    let string = `<div data-v-19b948c8="" data-v-515ea5f2="">
+    <h2 data-v-19b948c8="" class="link">
+        <a data-v-19b948c8="" class="">Torrents</a> 
+        <a data-v-19b948c8="" class="create">Sort</a><select id="sorter">
+        <option value="time">Sort: Time - Ascending</option>
+        <option value="-time">Sort: Time - Descending</option>
+        <option value="seeders">Sort: Seeds - Ascending</option>
+        <option value="-seeders">Sort: Seeds - Descending</option>
+        <option value="size">Sort: File size - Ascending</option>
+        <option value="-size">Sort: File size - Descending</option>
+        </select> <button onclick="sort()">Sort</button>
+    </h2>`
     for (let i = (10 * pageCount); i < ((10 * pageCount) + endLimitDiscriminator()); i++) {
-        string += `<tr><td class="borderClass di-t w100">
-    <div><a href="${torrents[i].torrent_file}">${torrents[i].title}</a>
-    <p style="float:right;">${torrents[i].size}</p></div>
-    <div><a style="float:left; margin-right: 5px;" href="${torrents[i].magnet}">Magnet</a>
-    <p style="float:left;">${torrents[i].seeders}↑</p><p style="float:left;">${torrents[i].leechers}↓</p>
-    <p style="float:right;">${torrents[i].time}</p></div></td></tr>`
+        string += `<div data-v-19b948c8="" class="threads"><div data-v-19b948c8="" class="thread-wrap limit">
+        <div data-v-70ae1ba4="" data-v-19b948c8="" class="thread-card small">
+            <a data-v-70ae1ba4="" href="${torrents[i].link}" class="title">${torrents[i].title}</a>
+        <div data-v-70ae1ba4="" class="footer"> 
+            <div data-v-70ae1ba4="" class="name"> 
+                <a data-v-70ae1ba4="" style="position: absolute;left: 20px" href="/forum/thread/30906/comment/848822" class="">${torrents[i].time} | ${torrents[i].size}</a>
+        </div> 
+        <div data-v-70ae1ba4="" class="categories">
+            <span data-v-51e37344="" data-v-70ae1ba4="">
+                <a data-v-51e37344="" href="${torrents[i].magnet}" class="category" style="background: rgb(103, 58, 183);">magnet</a>
+            </span>
+        </div> 
+        <div data-v-70ae1ba4="" class="info">
+            <span data-v-70ae1ba4=""> ${torrents[i].seeders} ↑</span> 
+            <span data-v-70ae1ba4="">${torrents[i].leechers} ↓</span>
+        </div>
+    </div></div>`
     }
-    string += `</tbody></table><center><p id="torrent-current-page">${pageCount+1}/${pages()}</center><center><a onclick="pageBack();" style="margin-right: 5px; cursor: pointer;">Back</a><a onclick="pageNext();" style="cursor: pointer;">Next</a></center>`
+    string += `</div><center><p id="torrent-current-page">${pageCount+1}/${pages()}</center><center><a onclick="pageBack();" style="margin-right: 5px; cursor: pointer;">Back</a><a onclick="pageNext();" style="cursor: pointer;">Next</a></center></br>`
     torrentElement.innerHTML = string
 }
 

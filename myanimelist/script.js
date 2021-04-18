@@ -23,9 +23,9 @@ function inflator(torrents) {
     </select> <button onclick="sort()">Sort</button>`
     for (let i = (10 * pageCount); i < ((10 * pageCount) + endLimitDiscriminator()); i++) {
         string += `<tr><td class="borderClass di-t w100">
-    <div><a href="${torrents[i].torrent_file}">${torrents[i].title}</a>
+    <div><a target="_blank" href="${torrents[i].link}">${torrents[i].title}</a>
     <p style="float:right;">${torrents[i].size}</p></div>
-    <div><a style="float:left; margin-right: 5px;" href="${torrents[i].magnet}">Magnet</a>
+    <div><a style="float:left; margin-right: 5px;" target="_blank" href="${torrents[i].magnet}">Magnet</a>
     <p style="float:left;">${torrents[i].seeders}↑</p><p style="float:left;">${torrents[i].leechers}↓</p>
     <p style="float:right;">${torrents[i].time}</p></div></td></tr>`
     }

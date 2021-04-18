@@ -4,4 +4,6 @@ s.src = chrome.runtime.getURL('anilist/script.js');
 s.onload = function() {
     this.remove();
 };
-(document.head || document.documentElement).appendChild(s);
+setTimeout(() => {
+    (document.head || document.documentElement).appendChild(s);
+}, 3000)
