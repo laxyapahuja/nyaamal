@@ -16,12 +16,20 @@
         {
             "matches": ["https://anilist.co/anime/*"],
             "js": ["anilist/content.js"]
-        }
+        },
+		{
+			"matches": ["https://kitsu.io/anime/*"],
+			"js": ["kitsu/content.js"]
+		}
     ],
-    "web_accessible_resources": ["myanimelist/script.js", "anilist/script.js"],
+    "background": {
+        "scripts": ["kitsu/background.js"]
+    },
+    "web_accessible_resources": ["myanimelist/script.js", "anilist/script.js", "kitsu/script.js"],
     "permissions": [
         "*://nyaaapi.herokuapp.com/*",
         "*://myanimelist.net/*",
+        "*://kitsu.io/*",
         "tabs"
     ]
 }
