@@ -17,10 +17,10 @@
             "matches": ["https://anilist.co/anime/*"],
             "js": ["anilist/content.js"]
         },
-		{
-			"matches": ["https://kitsu.io/anime/*"],
-			"js": ["kitsu/content.js"]
-		}
+        {
+            "matches": ["https://kitsu.io/anime/*"],
+            "js": ["kitsu/content.js"]
+        }
     ],
     "background": {
         "scripts": ["kitsu/background.js"]
