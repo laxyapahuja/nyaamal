@@ -13,7 +13,7 @@ let torrents = []
 let pageCount = 0
 
 function inflator(torrents) {
-    let string = `<h2>Torrents</h2><table class="table-recently-updated" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><select id="sorter">
+    let string = `<span class="floatRightHeader"><a href="https://github.com/laxyapahuja/nyaamal" target="_blank" style="color: rgb(103, 58, 183); text-decoration: underline">Powered by Nyaamal</a></span><h2>Torrents</h2><table class="table-recently-updated" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><select id="sorter">
     <option value="time">Sort: Time - Ascending</option>
     <option value="-time">Sort: Time - Descending</option>
     <option value="seeders">Sort: Seeds - Ascending</option>

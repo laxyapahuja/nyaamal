@@ -16,7 +16,7 @@ function inflator(torrents) {
     let string = `<div data-v-19b948c8="" data-v-515ea5f2="">
     <h2 data-v-19b948c8="" class="link">
         <a data-v-19b948c8="" class="">Torrents</a> 
-        <a data-v-19b948c8="" class="create">Sort</a><select id="sorter">
+        <a data-v-19b948c8="" class="create" href="https://github.com/laxyapahuja/nyaamal" target="_blank" style="color: rgb(103, 58, 183); text-decoration: underline">Powered by Nyaamal</a><select id="sorter">
         <option value="time">Sort: Time - Ascending</option>
         <option value="-time">Sort: Time - Descending</option>
         <option value="seeders">Sort: Seeds - Ascending</option>
