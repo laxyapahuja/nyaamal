@@ -7,10 +7,16 @@ A chrome extension to download anime torrents directly from MAL and Anilist. Use
 
 # Screenshots
 <img src="https://media.discordapp.net/attachments/621798627895017499/833300800565936128/unknown.png">
+
 MyAnimeList
-#
+
 <img src="https://media.discordapp.net/attachments/706928005313855620/833296878564409365/unknown.png">
+
 Anilist
+
+<img src="https://cdn.discordapp.com/attachments/746366803818840064/851022321565040640/unknown.png">
+
+Kitsu
 
 # How to install
 1. Clone this repository
