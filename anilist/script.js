@@ -26,23 +26,24 @@ function inflator(torrents) {
         </select> <button onclick="sort()">Sort</button>
     </h2>`
     for (let i = (10 * pageCount); i < ((10 * pageCount) + endLimitDiscriminator()); i++) {
-        string += `<div data-v-19b948c8="" class="threads"><div data-v-19b948c8="" class="thread-wrap limit">
-        <div data-v-70ae1ba4="" data-v-19b948c8="" class="thread-card small">
-            <a data-v-70ae1ba4="" href="${torrents[i].link}" class="title">${torrents[i].title}</a>
-        <div data-v-70ae1ba4="" class="footer"> 
-            <div data-v-70ae1ba4="" class="name"> 
-                <a data-v-70ae1ba4="" style="position: absolute;left: 20px" href="/forum/thread/30906/comment/848822" class="">${torrents[i].time} | ${torrents[i].size}</a>
-        </div> 
-        <div data-v-70ae1ba4="" class="categories">
-            <span data-v-51e37344="" data-v-70ae1ba4="">
-                <a data-v-51e37344="" href="${torrents[i].magnet}" class="category" style="background: rgb(103, 58, 183);">magnet</a>
-            </span>
-        </div> 
-        <div data-v-70ae1ba4="" class="info">
-            <span data-v-70ae1ba4=""> ${torrents[i].seeders} ↑</span> 
-            <span data-v-70ae1ba4="">${torrents[i].leechers} ↓</span>
+        string += `
+        <div style="width: 62vw; height: fit-content; background-color: white">
+            <div style="display: flex; justify-content: space-between">
+                <div style="width: 50vw; height: fit-content; padding: 1.3vw;">
+                    <a href="${torrents[i].link}" class="title" target="_blank"><span>${torrents[i].title}</span><a>
+                    <h2 style="position: relative; bottom: -1vw;">${torrents[i].time} | ${torrents[i].size}</h2>
+                </div>
+                <div style="width: 10vw; height: fit-content; padding: 1.3vw; text-align: right">
+                    <span data-v-70ae1ba4="">${torrents[i].seeders} ↑</span> 
+                    <span data-v-70ae1ba4="">${torrents[i].leechers} ↓</span><br><br>     
+                    <span data-v-51e37344="" data-v-70ae1ba4="" style="margin-left: -1vw; position: relative; bottom: -1vw;">
+                        <a data-v-51e37344="" href="${torrents[i].magnet}" class="category" style="background: rgb(103, 58, 183);" target="_blank">magnet</a>
+                    </span>
+                </div>
+             </div>
         </div>
-    </div></div>`
+        <br>
+        `
     }
     string += `</div><center><p id="torrent-current-page">${pageCount+1}/${pages()}</center><center><a onclick="pageBack();" style="margin-right: 5px; cursor: pointer;">Back</a><a onclick="pageNext();" style="cursor: pointer;">Next</a></center></br>`
     torrentElement.innerHTML = string
